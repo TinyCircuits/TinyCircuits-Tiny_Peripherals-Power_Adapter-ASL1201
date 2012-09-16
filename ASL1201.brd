@@ -179,7 +179,7 @@
 <wire x1="69.85" y1="50.8" x2="0" y2="50.8" width="0.127" layer="48"/>
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0.127" layer="48"/>
 <dimension x1="15" y1="29" x2="25" y2="29" x3="20.27340625" y3="32.365109375" layer="48"/>
-<text x="48.111025" y="4.365003125" size="0.889" layer="48">TinyLily Mini - USB</text>
+<text x="48.111025" y="4.365003125" size="0.889" layer="48">TinyLily Power Adapter Bd</text>
 <text x="44.986825" y="1.7714" size="0.889" layer="48">AS-PCB-ASL1201</text>
 <text x="67.3810375" y="1.6952" size="0.889" layer="48">1</text>
 <text x="23.674046875" y="21.1349125" size="0.5588" layer="21" rot="R270">Tiny-Circuits.com</text>
@@ -10559,29 +10559,6 @@ design rules under a new name.</description>
 <wire x1="18.7198" y1="22.5232" x2="21.5" y2="25.75" width="0.635" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="18,29,5d7d1480b0b83961"/>
-<approved hash="18,29,e5fc5192419a35d0"/>
-<approved hash="18,29,b33fd84195285420"/>
-<approved hash="18,29,67dc0dee0da76795"/>
-<approved hash="18,29,ea20ca42a4453fd5"/>
-<approved hash="18,29,e3597f001e1cc51b"/>
-<approved hash="18,29,110e3c940e60a8d4"/>
-<approved hash="18,29,5b9c0bea0ba25bd4"/>
-<approved hash="18,29,d78ab5adfaef17aa"/>
-<approved hash="18,29,9cd071e676099b3f"/>
-<approved hash="18,29,5d10aad1e8111dfc"/>
-<approved hash="18,29,c7e0cc1cf793fa0b"/>
-<approved hash="18,29,0f8c01e043bc431c"/>
-<approved hash="18,29,0248f94af9440246"/>
-<approved hash="18,29,f218f99ef827f3a1"/>
-<approved hash="18,29,5d10aad1c033e202"/>
-<approved hash="18,29,0ec7de07c032d6d5"/>
-<approved hash="18,29,5d01aac3e8211ddf"/>
-<approved hash="18,29,4268420e00a20e00"/>
-<approved hash="18,29,fba0f65ecd89c61b"/>
-<approved hash="18,29,07f8f6faf6f407f6"/>
-</errors>
 </board>
 </drawing>
 </eagle>
