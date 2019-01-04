@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -79,11 +79,26 @@
 <layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="108" name="fp8" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="109" name="fp9" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="202" name="202bmp" color="7" fill="1" visible="yes" active="yes"/>
@@ -109,6 +124,8 @@
 <layer number="222" name="222bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="223" name="223bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="224" name="224bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="251" name="SMDround" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -128,25 +145,32 @@
 <pad name="3" x="0" y="0" drill="0.7" diameter="1.016"/>
 <pad name="4" x="0" y="-1.27" drill="0.7" diameter="1.016"/>
 <pad name="5" x="0" y="-2.54" drill="0.7" diameter="1.016"/>
-<text x="-0.635" y="3.81" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-4.572" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-2.54" y="0" size="0.8128" layer="25" rot="R90" align="center">&gt;NAME</text>
 <wire x1="-4.9" y1="3.35" x2="-4.9" y2="-3.35" width="0.127" layer="51"/>
 <wire x1="-4.9" y1="3.35" x2="-0.805" y2="3.35" width="0.127" layer="51"/>
 <wire x1="-4.9" y1="-3.35" x2="-0.805" y2="-3.35" width="0.127" layer="51"/>
 </package>
-<package name="JST_PH_2">
-<wire x1="3.9183" y1="-2.6723" x2="-3.8975" y2="-2.6823" width="0.2032" layer="51"/>
-<wire x1="-3.8975" y1="-2.6823" x2="-3.8975" y2="4.9724" width="0.2032" layer="51"/>
-<wire x1="-3.8975" y1="4.9724" x2="3.9183" y2="4.9724" width="0.2032" layer="51"/>
-<wire x1="3.9156" y1="4.2836" x2="-3.8783" y2="4.2836" width="0.2032" layer="21"/>
-<wire x1="3.9183" y1="4.9724" x2="3.9183" y2="-2.6723" width="0.2032" layer="51"/>
-<smd name="F1" x="-3.85" y="2.8" dx="1.5" dy="3.4" layer="1"/>
-<smd name="1" x="1" y="-2.75" dx="1" dy="3.5" layer="1"/>
-<smd name="F2" x="3.85" y="2.8" dx="1.5" dy="3.4" layer="1"/>
-<text x="-2.6495" y="0.3462" size="1.27" layer="25">&gt;NAME</text>
-<rectangle x1="-2.48" y1="-3.13" x2="0.52" y2="-2.41" layer="51" rot="R90"/>
-<smd name="2" x="-1" y="-2.75" dx="1" dy="3.5" layer="1"/>
-<rectangle x1="-0.49" y1="-3.14" x2="2.51" y2="-2.42" layer="51" rot="R90"/>
+<package name="JST_SH_2X1">
+<smd name="1" x="-0.5" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<smd name="PAD1" x="-1.8" y="-1.325" dx="1.6" dy="1.2" layer="1" rot="R90"/>
+<smd name="PAD2" x="1.8" y="-1.325" dx="1.6" dy="1.2" layer="1" rot="R90"/>
+<smd name="2" x="0.5" y="2.475" dx="1.4" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-2" y1="2.125" x2="2" y2="2.125" width="0.127" layer="51"/>
+<wire x1="2" y1="2.125" x2="2" y2="-2.125" width="0.127" layer="51"/>
+<wire x1="2" y1="-2.125" x2="-2" y2="-2.125" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2.125" x2="-2" y2="2.125" width="0.127" layer="51"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+</package>
+<package name="1X.1&quot;">
+<pad name="1" x="0" y="0" drill="0.7" diameter="1.016"/>
+<text x="-0.9652" y="-1.5748" size="0.8128" layer="27">&gt;NAME</text>
+</package>
+<package name="1X.1&quot;_2">
+<pad name="1" x="0" y="0" drill="0.889" diameter="1.397"/>
+<text x="0" y="0" size="0.508" layer="25" align="center">&gt;NAME</text>
+</package>
+<package name="TEST_POINT">
+<smd name="P$1" x="0" y="0" dx="1.905" dy="1.905" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -180,7 +204,7 @@
 <text x="88.921590625" y="11.402059375" size="2.54" layer="94" font="vector">REV:</text>
 <text x="1.291590625" y="19.022059375" size="2.54" layer="94" font="vector">TITLE:</text>
 <text x="1.291590625" y="11.402059375" size="2.54" layer="94" font="vector">Document Number:</text>
-<text x="42.642790625" y="27.302459375" size="2.286" layer="94" font="vector">http://www.Tiny-Circuits.com</text>
+<text x="42.642790625" y="27.302459375" size="2.286" layer="94" font="vector">http://www.TinyCircuits.com</text>
 <rectangle x1="3.883025" y1="24.876125" x2="4.130675" y2="24.882475" layer="94"/>
 <rectangle x1="3.883025" y1="24.882475" x2="4.130675" y2="24.888825" layer="94"/>
 <rectangle x1="3.883025" y1="24.888825" x2="4.130675" y2="24.895175" layer="94"/>
@@ -10262,6 +10286,11 @@
 <pin name="1" x="-10.16" y="2.54" length="middle"/>
 <pin name="2" x="-10.16" y="0" length="middle"/>
 </symbol>
+<symbol name="1X.1&quot;">
+<text x="-4.826" y="2.032" size="1.778" layer="96">&gt;NAME</text>
+<pin name="1" x="0" y="0" visible="off" length="short" rot="R180"/>
+<circle x="-4.064" y="0" radius="1.481059375" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME_TINYCIRCUITS_B_L" prefix="FRAME" uservalue="yes">
@@ -10301,22 +10330,54 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00043" prefix="J">
-<description>CONN HEADER PH SIDE 2POS 2MM SMD</description>
+<deviceset name="AS-ITM-00231" prefix="J" uservalue="yes">
+<description>CONN HEADER SH 2POS SIDE 1MM</description>
 <gates>
-<gate name="G$1" symbol="1X2_HEADER" x="2.54" y="-2.54"/>
+<gate name="G$1" symbol="1X2_HEADER" x="5.08" y="-2.54"/>
 </gates>
 <devices>
-<device name="" package="JST_PH_2">
+<device name="" package="JST_SH_2X1">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="1" pad="2"/>
+<connect gate="G$1" pin="2" pad="1"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PARTNO" value="AS-ITM-00043" constant="no"/>
-<attribute name="VALUE" value="S2B-PH-SM4" constant="no"/>
+<attribute name="PARTNO" value="AS-ITM-00231" constant="no"/>
+<attribute name="VALUE" value="SM02B-SRSS-TB(LF)(SN)" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PIN_1X.1&quot;" prefix="J">
+<description>1 Pin 0.100" Header</description>
+<gates>
+<gate name="G$1" symbol="1X.1&quot;" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X.1&quot;">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1" package="1X.1&quot;_2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SQ_PAD" package="TEST_POINT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -10339,14 +10400,16 @@
 <parts>
 <part name="FRAME1" library="tinycircuits" deviceset="FRAME_TINYCIRCUITS_B_L" device=""/>
 <part name="J1" library="tinycircuits" deviceset="AS-ITM-00037" device="" value="LPPB051NGCN-RC"/>
-<part name="J2" library="tinycircuits" deviceset="AS-ITM-00043" device="" value="S2B-PH-SM4"/>
+<part name="J2" library="tinycircuits" deviceset="AS-ITM-00231" device="" value="SM02B-SRSS-TB(LF)(SN)"/>
+<part name="J4" library="tinycircuits" deviceset="PIN_1X.1&quot;" device="1"/>
+<part name="J3" library="tinycircuits" deviceset="PIN_1X.1&quot;" device="1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="340.868" y="17.272" size="3.556" layer="94" font="vector">TinyLily Power Adapter Bd</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-ASL1201</text>
-<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">1</text>
+<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">2</text>
 <text x="45.72" y="35.56" size="3.048" layer="91">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
 <text x="45.72" y="30.48" size="3.048" layer="91">http://creativecommons.org/licenses/by-sa/3.0</text>
 <text x="45.72" y="15.24" size="3.048" layer="91">LilyPad Arduino Design by Leah Buechley and Sparkfun Electronics</text>
@@ -10360,28 +10423,33 @@
 <attribute name="NAME" x="238.76" y="151.13" size="1.778" layer="95"/>
 <attribute name="VALUE" x="231.14" y="132.08" size="1.778" layer="96"/>
 </instance>
-<instance part="J2" gate="G$1" x="205.74" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="209.042" y="151.892" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="216.154" y="141.732" size="1.778" layer="96" rot="R180"/>
-</instance>
+<instance part="J2" gate="G$1" x="205.74" y="144.78" rot="MR0"/>
+<instance part="J4" gate="G$1" x="218.44" y="149.86" rot="R270"/>
+<instance part="J3" gate="G$1" x="218.44" y="142.24" rot="R90"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="VCC" class="0">
+<net name="N$1" class="0">
 <segment>
-<wire x1="233.68" y1="147.32" x2="215.9" y2="147.32" width="0.1524" layer="91"/>
-<label x="222.504" y="147.574" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="1"/>
+<pinref part="J4" gate="G$1" pin="1"/>
+<wire x1="215.9" y1="147.32" x2="218.44" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="147.32" x2="218.44" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="218.44" y1="147.32" x2="233.68" y2="147.32" width="0.1524" layer="91"/>
+<junction x="218.44" y="147.32"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="N$2" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="144.78" x2="233.68" y2="144.78" width="0.1524" layer="91"/>
-<label x="222.504" y="145.034" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="144.78" x2="218.44" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="1"/>
+<wire x1="218.44" y1="144.78" x2="215.9" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="144.78" x2="218.44" y2="142.24" width="0.1524" layer="91"/>
+<junction x="218.44" y="144.78"/>
 </segment>
 </net>
 </nets>
